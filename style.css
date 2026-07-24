@@ -3,10 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+  overflow-y: scroll;      
+  scrollbar-gutter: stable; 
+}
+
 body {
-    width: 100vw;
+    width: 100%;
     font-family: "Ubuntu",sans-serif;
 }
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 nav {
     display: flex;
     height: 64px;
@@ -15,17 +27,26 @@ nav {
     justify-content: space-between;
     padding: 0 24px;
 }
+
 nav a{
     text-decoration: none;
     color: black;
     height: 32px;
 }
+.nav__name {
+    height: 32px;
+}
 .nav__name a{
     display: flex;
+    height: 32px;
 }
 
 .nav__name span{
     display: none;
+}
+
+.nav__name--changeColor {
+    color: lightgray;    
 }
 
 .nav__chair {
@@ -43,10 +64,14 @@ nav a{
 .nav__menu {
     display: none;
     height: 32px;
+    gap: 16px;
+}
+.nav__menu a{
+    font-size: 20px;
 }
 
 main{
-    width: 100vw;
+    width: 100%;
 }
 
 .hero {
@@ -81,19 +106,43 @@ main{
     padding: 8px;
     background-color: gray;
     color: white;
+    width: 100%;
 }
 .information {
     display: flex;
     width: 100%;
+    padding: 16px 16px 0px;
 }
 .information__leftArticle {
     display: none;
+    padding-right: 24px;
+    height: 100%;
+    width: 60%;
+}
+
+.information__leftArticle picture{
+    height: 60%;
+    margin-bottom: 32px;
+}
+
+.information__leftArticle picture img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.information__leftArticle__text {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+}
+
+.information__leftArticle__text h2{
+    margin-bottom: 24px;
 }
 
 .information__rightArticle {
     display: flex;
     flex-direction: column;
-    padding: 16px 16px 0px;
     width: 100%;
 }
 
@@ -101,26 +150,28 @@ main{
     font-size: 10px;
 }
 
-.information__microArticle {
+.information__rightArticle__microArticle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.information__rightArticle__microArticle picture{
     width: 100%;
 }
 
-.information__microArticle picture{
+.information__rightArticle__microArticle picture img{
     width: 100%;
 }
 
-.information__microArticle picture img{
-    width: 100%;
-}
-
-.information__microArticle__text {
+.information__rightArticle__microArticle__text {
     padding: 16px 16px 32px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.information__microArticle__text a{
+.information__rightArticle__microArticle__text a{
     color: lightblue;
     text-decoration: none;
 }
@@ -168,6 +219,9 @@ main{
 
 .course__blockText {
     padding: 16px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .thesis {
@@ -197,6 +251,7 @@ main{
 
 .thesis__contentRight {
     display: none;
+    padding-left: 16px;
 }
 
 footer {
@@ -210,4 +265,293 @@ footer {
 
 .footer__right {
     display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .nav__name span{
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .nav__chair {
+        display: none;
+    }
+
+    .nav__tv{
+        display: none;
+    }
+
+    .nav__profile {
+        display: none;
+    }
+
+    .nav__menu {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: row;
+        padding: 32px 24px;
+    }
+
+    .hero__img {
+        width: 60%;
+    }
+
+    .hero__text {
+        width: 40%;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero__text h1{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .information {
+        padding: 32px 24px;
+        height: auto;
+    }
+    .information__leftArticle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .information__leftArticle picture{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .information__leftArticle img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .information__rightArticle {
+        padding-left: 16px;
+        width: 40%;
+        height: 100%;
+    }
+
+    .information__rightArticle__microArticle {
+        flex-direction: row;
+        height: 30%;
+    }
+
+    .information__rightArticle__microArticle__text {
+        width: 65%;
+    }
+
+    .information__rightArticle__microArticle__text h2{
+        font-size: 20px;
+    }
+
+    .information__rightArticle__microArticle__text p{
+        font-size: 8px;
+    }
+
+    .information__rightArticle__microArticle picture{
+        height: 100%;
+        width: 35%;
+    }
+
+    .information__rightArticle__microArticle picture img{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .course {
+        padding: 32px 72px;
+        background-color: lightgray;
+    }
+
+    .course h2{
+        padding-bottom: 32;
+    }
+
+    .course__content {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        gap: 32px;
+    }
+
+    .course__block {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course__block picture{
+        display: block;
+        height: auto;
+    }
+
+    .course_blockSubtext {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+    }
+
+    .thesis {
+        padding: 32px 24px;
+        gap: 32px;
+        width: 100%;
+    }
+
+    .thesis__content {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 24px;
+    }
+
+    .thesis__contentLeft figure{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .thesis__contentLeft figcaption {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .thesis__contentRight {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .thesis__microArticle {
+        display: flex;
+        width: 100%;
+        padding: 16px 0;
+        gap: 16px;
+    }
+
+    .thesis__microArticle picture{
+        width: 35%;
+        height: auto;
+    }
+
+    .thesis__microArticle__text {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .thesis__microArticle__text p{
+        font-size: 10px;
+    }
+
+    footer {
+        padding: 16px 24px;
+        justify-content: space-between;
+    }
+    .footer__right {
+        display: flex;
+        gap: 16px;
+    }
+
+    .footer__right a{
+        text-decoration: none;
+        color: gray;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .hero__text h1{
+        font-size: 50px;
+    }
+
+    .hero__text p,a{
+        font-size: 20px;
+    }
+
+    .information__rightArticle__microArticle__text h2{
+        font-size: 25px;
+    }
+
+    .information__rightArticle__microArticle__text p{
+        font-size: 15px;
+    }
+
+    .thesis__microArticle__text h3{
+        font-size: 25px;
+    }
+
+    .thesis__microArticle__text p{
+        font-size: 15px;
+    }
+
+    .footer__left p{
+        font-size: 15px;
+    }
+
+    .footer__right a{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .nav__name span{
+        font-size: 25px;
+    }
+
+    .hero__text h1{
+        font-size: 70px;
+    }
+    
+    .hero__text p,a{
+        font-size: 30px;
+    }
+
+    .information__leftArticle__text h2{
+        font-size: 50px;
+    }
+
+    .information__leftArticle__text p{
+        font-size: 25px;
+    }
+
+    .information__rightArticle__microArticle__text h2{
+        font-size: 40px;
+    }
+
+    .information__rightArticle__microArticle__text p{
+        font-size: 20px;
+    }
+
+    .course h2{
+        font-size: 50px;
+    }
+
+    .thesis h2{
+        font-size: 50px;
+    }
+
+    .course__blockText h3{
+        font-size: 30px;
+    }
+
+    .thesis__contentLeft h3{
+        font-size: 40px;
+    }
+
+    .thesis__contentLeft p{
+        font-size: 20px;
+    }
+
+    .thesis__microArticle__text h3{
+        font-size: 30px;
+    }
+
+    .thesis__microArticle__text p{
+        font-size: 20px;
+    }
 }
