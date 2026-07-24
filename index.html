@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colmar Academy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,22 +15,22 @@
             <div class="nav__name">
                 <a href="">
                     <img src="images\ic-logo.svg" alt="โลโก้">
-                    <h1>COLMARACADEMY</h1>
+                    <span>COLMARACADEMY</span>
                 </a>
             </div>
             <div class="nav__chair">
                 <a href="">
-                    <img src="" alt="">
+                    <img src="images\ic-on-campus.svg" alt="โลโก้2">
                 </a>
             </div>
             <div class="nav__tv">
                 <a href="">
-                    <img src="" alt="">
+                    <img src="images\ic-online.svg" alt="โลโก้3">
                 </a>
             </div>
             <div class="nav__profile">
                 <a href="">
-                    <img src="" alt="">
+                    <img src="images\ic-login.svg" alt="โลโก้4">
                 </a>
             </div>
             <div class="nav__menu">
@@ -39,10 +42,144 @@
         </nav>
     </header>
     <main>
-        <section class="hero"></section>
-        <section class="information"></section>
-        <section class="course"></section>
-        <section class="thesis"></section>
+        <section class="hero">
+            <picture class="hero__img">
+                <img src="images\banner.jpg" alt="Women reading a book">
+            </picture>
+            <div class="hero__text">
+                <h1><strong>Learn something<br>new everyday</strong></h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">Start here</a>
+            </div>
+        </section>
+        <section class="information">
+            <article class="information__leftArticle">
+                <picture>
+                    <img src="images\information-main.jpg" alt="Man reading a book">
+                </picture>
+                <h2>It doesn't hurt to keep practicing</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non soluta, laborum accusantium esse impedit dicta, saepe minus odit a maxime, tenetur quisquam eos possimus nostrum perferendis iste. Voluptas, debitis? Sunt, culpa!</p>
+                <p>Emanuel, Sr Strategist at Hiring.com</p>
+            </article>
+            <div class="information__rightArticle">
+                <article class="information__microArticle">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images\information-orientation-mobile.jpg">
+                        <source media="(min-width: 769px)" srcset="images\information-orientation.jpg">
+                        <img src="images\information-orientation-mobile.jpg" alt="A group of people">
+                    </picture>
+                    <div class="information__microArticle__text">
+                        <h2>Orientation date</h2>
+                        <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                        <a href="">Read more</a>
+                    </div>
+                </article>
+                <article class="information__microArticle">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images\information-campus-mobile.jpg">
+                        <source media="(min-width: 769px)" srcset="images\information-campus.jpg">
+                        <img src="images\information-campus-mobile.jpg" alt="A campus room">
+                    </picture>
+                    <div class="information__microArticle__text">
+                        <h2>Our campus</h2>
+                        <p>Find which campus is close by you</p>
+                        <a href="">Read more</a>
+                    </div>
+                </article>
+                <article class="information__microArticle">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images\information-guest-lecture-mobile.jpg">
+                        <source media="(min-width: 769px)" srcset="images\information-guest-lecture.jpg">
+                        <img src="images\information-guest-lecture-mobile.jpg" alt="Oliver Sack">
+                    </picture>
+                    <div class="information__microArticle__text">
+                        <h2>Special guest lecture</h2>
+                        <p>Join a keynote with Oliver Sack about<br>music in medical treatment</p>
+                        <a href="">Read more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="course">
+            <h2>Start learning</h2>
+            <div class="course__content">
+                <div class="course__block">
+                    <picture>
+                        <img src="images\course-software.jpg" alt="Software engineering">
+                    </picture>
+                    <div class="course__blockText">
+                        <h3>Software engineering</h3>
+                        <div class="course_blockSubtext">
+                            <p>COURSES</p>
+                            <p>Web Development, Mobile<br>Development, iOT, APIs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course__block">
+                    <picture>
+                        <img src="images\course-computer-art.jpg" alt="Software engineering">
+                    </picture>
+                    <div class="course__blockText">
+                        <h3>Computer art</h3>
+                        <div class="course_blockSubtext">
+                            <p>COURSES</p>
+                            <p>Imaging & Design, Web Design,<br>Motion Graphics & Visual Effects,<br>Computer Animation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course__block">
+                    <picture>
+                        <img src="images\course-design.jpg" alt="Design">
+                    </picture>
+                    <div class="course__blockText">
+                        <h3>Design</h3>
+                        <div class="course_blockSubtext">
+                            <p>COURSES</p>
+                            <p>User Experience Design, User<br>Research, Visual Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course__block">
+                    <picture>
+                        <img src="images\course-data.jpg" alt="Data">
+                    </picture>
+                    <div class="course__blockText">
+                        <h3>Data</h3>
+                        <div class="course_blockSubtext">
+                            <p>COURSES</p>
+                            <p>Data Science, Big Data, SQL, Data<br>Visualization</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course__block">
+                    <picture>
+                        <img src="images\course-business.jpg" alt="Business">
+                    </picture>
+                    <div class="course__blockText">
+                        <h3>Business</h3>
+                        <div class="course_blockSubtext">
+                            <p>COURSES</p>
+                            <p>Web Development, Mobile<br>Development, iOT, APIs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course__block">
+                    <picture>
+                        <img src="images\course-marketing.jpg" alt="Software engineering">
+                    </picture>
+                    <div class="course__blockText">
+                        <h3>Marketing</h3>
+                        <div class="course_blockSubtext">
+                            <p>COURSES</p>
+                            <p>Analytics, Content Marketing,<br>Mobile Marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="thesis">
+            
+        </section>
     </main>
     <footer>
         <div class="footer__left"></div>
