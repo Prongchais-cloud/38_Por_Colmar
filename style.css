@@ -97,6 +97,10 @@ main{
     width: 100%;
 }
 
+.information__rightArticle p,a{
+    font-size: 10px;
+}
+
 .information__microArticle {
     width: 100%;
 }
@@ -110,15 +114,19 @@ main{
 }
 
 .information__microArticle__text {
-    padding: 32px 16px;
+    padding: 16px 16px 32px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .information__microArticle__text a{
     color: lightblue;
     text-decoration: none;
+}
+
+.information--extraPaddingTop {
+    padding-top: 16px;
 }
 
 .course {
@@ -160,4 +168,46 @@ main{
 
 .course__blockText {
     padding: 16px 16px 24px;
+}
+
+.thesis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    padding: 32px 0 24px;
+}
+
+.thesis__contentLeft {
+    width: 100%;
+}
+
+.thesis__contentLeft figure{
+    width: 100%;
+}
+
+.thesis__contentLeft figure video{
+    width: 100%;
+}
+
+.thesis__contentLeft figcaption{
+    display: none;
+}
+
+.thesis__contentRight {
+    display: none;
+}
+
+footer {
+    display: flex;
+    padding: 16px;
+}
+
+.footer__left {
+    font-size: 10px;
+}
+
+.footer__right {
+    display: none;
 }
